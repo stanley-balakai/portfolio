@@ -1,0 +1,30 @@
+---
+import logo from '/SB-Logo.png';
+import BurgerMenu from './BurgerMenu.astro';
+// import 'tailwindcss/tailwind.css';
+---
+
+<header class="bg-gradient-to-b from-blue-950 shadow-sm fixed w-full z-10">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-2 md:py-4">
+        <div class="logo cursor-pointer">
+          <img src={logo} alt="Logo" class="h-5 md:h-6" id="logo">
+        </div>
+        <div class="menu">
+          <BurgerMenu />
+        </div>
+      </div>
+    </div>
+  </header>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const logo = document.getElementById('logo');
+  
+      logo.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+  

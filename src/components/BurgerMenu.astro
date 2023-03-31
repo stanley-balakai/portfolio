@@ -1,0 +1,38 @@
+---
+// import 'tailwindcss/tailwind.css';
+---
+
+<div class="relative inline-block">
+  <button id="burgerMenuToggle" class="w-10 h-10 focus:outline-none">
+    <span class="block w-6 h-0.5 mt-2 mb-1 bg-primary"></span>
+    <span class="block w-6 h-0.5 mb-1 bg-primary"></span>
+    <span class="block w-6 h-0.5 bg-primary"></span>
+  </button>
+
+  <div id="burgerMenuDropdown" class="absolute right-0 mt-2 w-48 bg-blue-950 shadow-lg rounded-md p-4 hidden">
+    <a href="https://github.com/stanley-balakai" target="_blank" class="text-gray-400 hover:text-accent flex items-center mb-3">
+      <i class="fab fa-github fa-lg mr-2"></i> GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/stanley-balakai/" target="_blank" class="text-gray-400 hover:text-accent flex items-center">
+      <i class="fab fa-linkedin fa-lg mr-2"></i> LinkedIn
+    </a>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const burgerMenuToggle = document.getElementById('burgerMenuToggle');
+    const burgerMenuDropdown = document.getElementById('burgerMenuDropdown');
+
+    burgerMenuToggle.addEventListener('click', () => {
+      burgerMenuDropdown.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+  if (e.target instanceof Node && !burgerMenuToggle.contains(e.target) && !burgerMenuDropdown.contains(e.target)) {
+    burgerMenuDropdown.classList.add('hidden');
+  }
+});
+
+  });
+</script>

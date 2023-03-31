@@ -1,81 +1,83 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout class="bg-secondary">
+	<div class="container mx-auto px-4 py-12">
+	  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		<div class="flex flex-col items-start md:pl-12">
+		  <h1 class="text-6xl md:text-9xl font-bold font-sans text-accent">Stanley Balakai</h1>
+		  <h2 class="text-3xl text-accent">Full-Stack Software Developer</h2>
+		</div>
+  
+	</div>
+</div>
+<div class="container mx-auto px-4 py-12">
+	<div class="ABC mx-auto max-w-4xl">
+  
+	  <div class="relative group">
+		<div class="relative flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
+		  <div class="w-full">
+			<div class="px-4">
+			  <h2 class="text-4xl font-bold text-primary">About Me</h2>
+			  <p class="text-2xl text-primary">I am a junior software developer with a passion for learning new technologies and building applications. I am currently studying at the University of Cape Town and am looking for a full-time position as a software developer I am a junior software developer with a passion for learning new technologies and building applications. word weod .</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+  </div>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+  <div class="container mx-auto px-4 py-12">
+	<div class="ABC mx-auto max-w-3xl">
+  
+	  <div class="relative group">
+		<div class="relative flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
+		  <div class="w-full">
+			<div class="px-4">
+			  <h2 class="text-4xl font-bold text-primary">About Me</h2>
+			  <p class="text-2xl text-primary">I am a junior software developer with a passion for learning new technologies and building applications. I am currently studying at the University of Cape Town and am looking for a full-time position as a software developer I am a junior software developer with a passion for learning new technologies and building applications. word weod .</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+  </div>
+
+  <Card  />
+  
+  
+  </Layout>
+  
+
+  <style>
+	.group::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, #AFD34D, #91A1BF);
+  filter: blur(10px);
+  opacity: 0.5;
+  transition: opacity 0.5s;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.group:hover::before {
+  opacity: 1;
+}
+
+  </style>
+  
+  
+  
+  
+  
+  
+
+
+  
+  
