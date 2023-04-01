@@ -1,40 +1,24 @@
 ---
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+import stanley from "/Me.png";
 ---
 
 <Layout class="bg-secondary">
 	<div class="container mx-auto px-4 py-12">
 	  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-		<div class="flex flex-col items-start md:pl-12">
-		  <h1 class="text-6xl md:text-9xl font-bold font-sans text-accent">Stanley Balakai</h1>
-		  <h2 class="text-3xl text-accent">Full-Stack Software Developer</h2>
-		</div>
-  
-	</div>
-</div>
-<div class="container mx-auto px-4 py-12">
-	<div class="ABC mx-auto max-w-4xl">
-  
-	  <div class="relative group">
-		<div class="relative flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
-		  <div class="w-full">
-			<div class="px-4">
-			  <h2 class="text-4xl font-bold text-primary">About Me</h2>
-			  <p class="text-2xl text-primary">I am a junior software developer with a passion for learning new technologies and building applications. I am currently studying at the University of Cape Town and am looking for a full-time position as a software developer I am a junior software developer with a passion for learning new technologies and building applications. word weod .</p>
-			</div>
+		  <div class="flex flex-col items-start md:pl-12">
+		    <h1 class="text-6xl md:text-9xl font-bold font-sans text-accent">Stanley Balakai</h1>
+		    <h2 class="text-lg md:text-3xl text-accent">Full-Stack Software Developer</h2>
 		  </div>
-		</div>
-	  </div>
+		  <img class="hidden lg:w-1/3 md:w-1/3 container mx-auto border-accent border-4 rounded-xl img-hover md:block" src={stanley} alt="Developer">
+	   </div>
 	</div>
-  
-  </div>
 
   <div class="container mx-auto px-4 py-12">
 	<div class="ABC mx-auto max-w-3xl">
-  
 	  <div class="relative group">
-		<div class="relative flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
+		<div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
 		  <div class="w-full">
 			<div class="px-4">
 			  <h2 class="text-4xl font-bold text-primary">About Me</h2>
@@ -44,10 +28,9 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	  </div>
 	</div>
-  
   </div>
 
-  <Card  />
+  <!-- <Card  /> -->
   
   
   </Layout>
@@ -69,6 +52,15 @@ import Layout from "../layouts/Layout.astro";
 .group:hover::before {
   opacity: 1;
 }
+
+.img-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-hover:hover {
+  transform: scale(1.1); /* Change 1.1 to the desired scaling factor */
+}
+
 
   </style>
   

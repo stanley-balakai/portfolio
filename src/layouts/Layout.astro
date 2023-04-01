@@ -14,13 +14,22 @@ import Header from '../components/Header.astro';
 
 </head>
 <body class="bg-secondary">
-  <Header />
   
+  <Header class="header" />
   <main class="pt-20">
-    <slot />
+    <div>
+      <slot />
+    </div>
   </main>
   
 </body>
 </html>
 
+<style>
+  .header {
+  z-index: 100; /* Adjust this value to ensure the header is on top of other elements */
+  position: relative;
+}
+
+</style>
 

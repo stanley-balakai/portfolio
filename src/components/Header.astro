@@ -4,7 +4,7 @@ import BurgerMenu from './BurgerMenu.astro';
 // import 'tailwindcss/tailwind.css';
 ---
 
-<header class="bg-gradient-to-b from-blue-950 shadow-sm fixed w-full z-10">
+<header class="header bg-gradient-to-b from-blue-950 shadow-sm fixed w-full z-10">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-2 md:py-4">
         <div class="logo cursor-pointer">
@@ -27,4 +27,11 @@ import BurgerMenu from './BurgerMenu.astro';
       });
     });
   </script>
+
+<style>
+
+  .header{
+  z-index: 1; /* Adjust this value to ensure the header is on top of other elements */
+}
+</style>
   
