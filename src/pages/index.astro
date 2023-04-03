@@ -2,27 +2,41 @@
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import stanley from "/Me.png";
+
+const projects = await Astro.glob('../projects/*.md');
+
+const technologies: string[] = ["React", "Node.js", "Express", "MongoDB", "PostgreSQL", "MySQL", 
+								"Python", "Django", "Java", "Astro js", "HTML", "CSS",
+ 								"JavaScript", "TypeScript", "AWS", "Netlify", "Vercel",]
 ---
 
 <Layout class="bg-secondary">
-	<div class="container mx-auto px-4 py-12">
+	<div class="container mx-auto px-4 py-12 pt-56">
 	  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 		  <div class="flex flex-col items-start md:pl-12">
-		    <h1 class="text-6xl md:text-9xl font-bold font-sans text-accent">Stanley Balakai</h1>
-		    <h2 class="text-lg md:text-3xl text-accent">Full-Stack Software Developer</h2>
+		    <h1 class="text-6xl md:text-9xl font-bold font-sans text-accent fade-in-name">Stanley Balakai</h1>
+		    <h2 class="text-lg md:text-3xl text-accent fade-in-name">Full-Stack Software Developer</h2>
 		  </div>
-		  <img class="hidden lg:w-1/3 md:w-1/3 container mx-auto border-accent border-4 rounded-xl img-hover md:block" src={stanley} alt="Developer">
+		  <img class="hidden lg:w-1/3 md:w-1/3 container mx-auto border-accent border-4 rounded-xl img-hover md:block fade-in-image" src={stanley} alt="Developer">
 	   </div>
 	</div>
-
-  <div class="container mx-auto px-4 py-12">
+	
+<h2 class=" text-center text-4xl font-bold text-primary magic-text pt-60" id="hidden-card">About Me</h2>
+  <div class="container mx-auto px-4 py-12" id="hidden-card" >
 	<div class="ABC mx-auto max-w-3xl">
 	  <div class="relative group">
 		<div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
 		  <div class="w-full">
 			<div class="px-4">
-			  <h2 class="text-4xl font-bold text-primary">About Me</h2>
-			  <p class="text-2xl text-primary">I am a junior software developer with a passion for learning new technologies and building applications. I am currently studying at the University of Cape Town and am looking for a full-time position as a software developer I am a junior software developer with a passion for learning new technologies and building applications. word weod .</p>
+			  <p class="text-2xl text-primary">Hi there! I'm [Your Name], a passionate software developer who loves to explore the ever-evolving world of technology. When I'm not busy coding or learning about the latest programming trends, you can find me enjoying board games, trying out new recipes in the kitchen, or exploring local hiking trails with my trusty canine sidekick, [Dog's Name].
+
+				I firmly believe that creativity and a touch of fun go hand-in-hand with technical expertise, which is why I always strive to add a unique flair to each project I work on. My love for software development began when I discovered the power of turning ideas into reality through code, and it has grown ever since.
+				
+				As a self-taught developer, I've picked up a variety of programming languages and technologies along the way, such as JavaScript, Python, React, and Django, to name just a few. I'm a firm believer in the power of continuous learning and enjoy tackling new challenges head-on, whether that's mastering a new programming language or building a cutting-edge app from scratch.
+				
+				When I'm not immersed in the world of tech, I also enjoy giving back to my community through volunteer work and sharing my knowledge by mentoring aspiring developers. I'm always eager to connect with like-minded individuals, so feel free to reach out to me on [LinkedIn, Twitter, or another platform of your choice] if you'd like to chat about software development, swap board game recommendations, or simply share a funny programming meme.
+				
+				Happy coding!</p>
 			</div>
 		  </div>
 		</div>
@@ -30,7 +44,48 @@ import stanley from "/Me.png";
 	</div>
   </div>
 
-  <!-- <Card  /> -->
+  <br/> 
+  <br/> 
+
+  <div class="container mx-auto px-4 py-12">
+	<div class=" mx-auto max-w-3xl">
+	  <div class="text-center">
+		<div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
+		  <div class="w-full">
+			<div class="px-4">
+				<div class="magic">
+					
+				</div>
+			  <h2 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Projects</h2>
+			  <p class="text-md text-primary">click to read more!</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+<br/> 
+<br/> 
+
+
+  <section class="align-center page-content">
+	<div class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 hover:cursor-pointer" id="hidden-card">
+	  {projects.map(proj => (
+		<Card >
+		  <div class="card-element p-4 bg-secondary shadow-lg rounded-lg" data-slug={`/${proj.frontmatter.slug}`}>
+			<h3 class="text-primary text-center text-xl font-bold">{proj.frontmatter.title}</h3>
+			<p class="text-primary mt-2">{proj.frontmatter.tech}</p>
+
+		  </div>
+		</Card>
+	  ))}
+	</div>
+  </section>
+  
+  
+  
+  
   
   
   </Layout>
@@ -61,10 +116,110 @@ import stanley from "/Me.png";
   transform: scale(1.1); /* Change 1.1 to the desired scaling factor */
 }
 
+:root {  
+  --primary: #91A1BF;
+  --accent: #AFD34D;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+
+
+
+
+
+
+
+.magic {
+  display: inline-block;
+  position: relative;
+}
+
+ .magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--primary),
+    var(--accent),
+    var(--primary),
+    var(--primary)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#hidden-card.show {
+	  opacity: 1;
+	}
+
+  }
+
+#hidden-card {
+	  opacity: 0;
+	  transition: all 1s ease-in-out;
+	}
+
+	#hidden-card.show {
+	  opacity: 1;
+	}
+
+.fade-in-image {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+.fade-in-name {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
   </style>
   
-  
+  <script>
+
+	document.querySelectorAll(".card-element").forEach((card) => {
+	card.addEventListener("click", function () {
+		const slug = this.getAttribute("data-slug");
+		window.location.href = slug;
+	});
+	});
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.intersectionRatio > 0) {
+			entry.target.classList.add('show');
+			} else {
+			entry.target.classList.remove('show')
+		}
+	});
+});
+
+
+	const hiddenElements = document.querySelectorAll("#hidden-card")
+	hiddenElements.forEach((element) => observer.observe(element));
+
+
+
+  </script>
   
   
   

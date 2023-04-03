@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+export async function getStaticPaths() {
+    const projects = await Astro.glob('../projects/*.md');
+    return projects.map(proj => ({
+        params: {
+            slug: proj.frontmatter.slug
+        }, 
+        props: {
+            proj 
+        }
+    }))
+}
+
+const {Content, frontmatter}= Astro.props.proj 
+---
+
+<Layout title={frontmatter.title}>
+    <section class="page-content">
+        <div class="container">
+            <Card>
+                <a href="/" class="btn">Go Back</a>
+                <h2 class="text-center">{frontmatter.title}</h2>
+                <Content class="text-center" />
+            </Card>
+        </div>
+    </section>
+</Layout>
+
+<script type="module">
+    import { onMount } from 'svelte';
+  
+    onMount(() => {
+      const goBackButton = document.getElementById('go-back');
+  
+      goBackButton.addEventListener('click', () => {
+        history.back();
+      });
+  
+      const scrollPos = sessionStorage.getItem('scrollPos');
+      if (scrollPos) {
+        window.scrollTo(0, parseInt(scrollPos, 10));
+      }
+  
+      window.addEventListener('beforeunload', () => {
+        sessionStorage.setItem('scrollPos', window.scrollY.toString());
+      });
+    });
+  </script>
+  
+  
+  

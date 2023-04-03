@@ -1,6 +1,7 @@
 ---
 title: LoLDB
-tech: JavaScript, Node.js, Express, HTML, CSS/SASS, Bootstrap CSS,  MongoDB, Heroku
+tech: JavaScript, Node.js, Express, HTML, CSS/SASS, Bootstrap CSS,  MongoDB,
+slug: LoLDB
 ---
 
 ### Key Features
