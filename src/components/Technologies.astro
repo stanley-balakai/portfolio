@@ -1,0 +1,40 @@
+---
+const technologies: string[] = ["React", "Node.js", "Express", "MongoDB", "PostgreSQL", "MySQL", 
+								"Python", "Django", "Java", "Astro js", "HTML", "CSS",
+ 								"JavaScript", "TypeScript", "AWS", "Netlify", "Vercel",]
+---
+
+<div class="flex flex-wrap justify-center">
+    {technologies.map(tech => (
+      <div class="m-2 p-2 text-xl text-primary border-4 border-accent rounded-xl inline-block min-w-[10rem] text-center card-hover" id="hidden-card">
+        {tech}
+      </div>
+    ))}
+  </div>
+  
+
+<style>
+    @media (prefers-reduced-motion: reduce) {
+	#hidden-card.show {
+	  opacity: 1;
+	}
+
+  }
+
+#hidden-card {
+	  opacity: 0;
+	  transition: all 1s ease-in-out;
+	}
+
+	#hidden-card.show {
+	  opacity: 1;
+	}
+
+.card-hover {
+  transition: transform 0.03s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: scale(1.1); /* Change 1.1 to the desired scaling factor */
+}
+</style>

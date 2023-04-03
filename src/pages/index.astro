@@ -1,13 +1,11 @@
 ---
 import Card from "../components/Card.astro";
+import Technologies from "../components/Technologies.astro";
 import Layout from "../layouts/Layout.astro";
 import stanley from "/Me.png";
 
 const projects = await Astro.glob('../projects/*.md');
 
-const technologies: string[] = ["React", "Node.js", "Express", "MongoDB", "PostgreSQL", "MySQL", 
-								"Python", "Django", "Java", "Astro js", "HTML", "CSS",
- 								"JavaScript", "TypeScript", "AWS", "Netlify", "Vercel",]
 ---
 
 <Layout class="bg-secondary">
@@ -21,22 +19,20 @@ const technologies: string[] = ["React", "Node.js", "Express", "MongoDB", "Postg
 	   </div>
 	</div>
 	
-<h2 class=" text-center text-4xl font-bold text-primary magic-text pt-60" id="hidden-card">About Me</h2>
+<h2 class=" text-center text-4xl font-bold text-primary magic-text pt-60">About Me</h2>
   <div class="container mx-auto px-4 py-12" id="hidden-card" >
 	<div class="ABC mx-auto max-w-3xl">
 	  <div class="relative group">
 		<div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
 		  <div class="w-full">
 			<div class="px-4">
-			  <p class="text-2xl text-primary">Hi there! I'm [Your Name], a passionate software developer who loves to explore the ever-evolving world of technology. When I'm not busy coding or learning about the latest programming trends, you can find me enjoying board games, trying out new recipes in the kitchen, or exploring local hiking trails with my trusty canine sidekick, [Dog's Name].
-
-				I firmly believe that creativity and a touch of fun go hand-in-hand with technical expertise, which is why I always strive to add a unique flair to each project I work on. My love for software development began when I discovered the power of turning ideas into reality through code, and it has grown ever since.
-				
-				As a self-taught developer, I've picked up a variety of programming languages and technologies along the way, such as JavaScript, Python, React, and Django, to name just a few. I'm a firm believer in the power of continuous learning and enjoy tackling new challenges head-on, whether that's mastering a new programming language or building a cutting-edge app from scratch.
-				
-				When I'm not immersed in the world of tech, I also enjoy giving back to my community through volunteer work and sharing my knowledge by mentoring aspiring developers. I'm always eager to connect with like-minded individuals, so feel free to reach out to me on [LinkedIn, Twitter, or another platform of your choice] if you'd like to chat about software development, swap board game recommendations, or simply share a funny programming meme.
-				
-				Happy coding!</p>
+			  <p class="text-2xl text-primary font-light">Hi, I'm <strong class="font-bold">Stanley Balakai</strong>, a dedicated software developer with a passion for exploring the ever-changing landscape of technology. My journey as a self-taught programmer has instilled in me the importance of continuous learning and personal growth.
+				<br/>
+				<br/>
+				I enjoy tackling new challenges head-on and am driven by the thrill of turning ideas into reality through code. In my downtime, I love trying out new recipes in the kitchen, playing sports or working out, spending time outdoors, and going out to eat with friends.
+				<br/>
+				<br/>
+				As I continue to expand my knowledge and skills, I'm excited to embark on new adventures in the world of software development. Let's build something great together!</p>
 			</div>
 		  </div>
 		</div>
@@ -44,10 +40,18 @@ const technologies: string[] = ["React", "Node.js", "Express", "MongoDB", "Postg
 	</div>
   </div>
 
-  <br/> 
-  <br/> 
+  <div class="text-center pt-48">
 
-  <div class="container mx-auto px-4 py-12">
+	  <h1 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Technologies</h1>
+	  <p class="text-md text-primary">this is some of the stuff i've worked with</p>
+  </div>
+
+<div class="pt-20">
+	<Technologies />
+</div>
+
+
+  <div class="container mx-auto px-4 py-12 pt-48">
 	<div class=" mx-auto max-w-3xl">
 	  <div class="text-center">
 		<div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
@@ -64,9 +68,6 @@ const technologies: string[] = ["React", "Node.js", "Express", "MongoDB", "Postg
 </div>
 </div>
 </div>
-
-<br/> 
-<br/> 
 
 
   <section class="align-center page-content">
