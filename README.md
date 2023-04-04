@@ -1,55 +1,27 @@
-# Astro Starter Kit: Basics
+Portfolio 🌐
+============
 
-```
-npm create astro@latest -- --template basics
-```
+My portfolio is a web application built using Astro, Tailwind CSS, and Node.js. It features a responsive design with a clean and modern user interface, providing an excellent user experience across various devices.
+Features
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+* Home, About, Projects, and Contact section
+* Mobile-friendly navigation
+* Project showcase with detailed descriptions
+* Contact component with personal contact information
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Technologies Used 🛠
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+* **Astro**: A modern front-end framework for building fast, optimized websites
+* **Tailwind CSS**: Utility-first CSS framework for rapidly building custom designs
+* **Node.js**: JavaScript runtime environment for executing JavaScript code on the server side
 
+### Project Details 🗒
 
-## 🚀 Project Structure
+This project showcases a range of modern web development skills and demonstrates the ability to create an attractive and user-friendly portfolio website. The site offers a seamless experience for users, with smooth transitions between sections and a mobile-first design. The project showcase is an essential feature, allowing users to explore and learn more about each project.
 
-Inside of your Astro project, you'll see the following folders and files:
+The portfolio is built using best practices for modern web development, including the use of Astro for building user interfaces, Tailwind CSS for rapid, responsive design creation, and Node.js for server-side functionality. The code is organized and structured to allow for easy maintenance and future expansion.
+See It In Action 💫
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### See It In Action 💫
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[Click me!](https://stanleybalakai.com/)
