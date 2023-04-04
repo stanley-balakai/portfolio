@@ -1,5 +1,6 @@
 ---
 import Card from "../components/Card.astro";
+import Contact from "../components/Contact.astro";
 import Technologies from "../components/Technologies.astro";
 import Layout from "../layouts/Layout.astro";
 import stanley from "/Me.png";
@@ -46,9 +47,12 @@ const projects = await Astro.glob('../projects/*.md');
 	  <p class="text-md text-primary">this is some of the stuff i've worked with</p>
   </div>
 
-<div class="pt-20">
-	<Technologies />
-</div>
+  <div class="pt-20">
+	<div class="container mx-auto max-w-screen-lg">
+	  <Technologies />
+	</div>
+  </div>
+  
 
 
   <div class="container mx-auto px-4 py-12 pt-48">
@@ -71,7 +75,7 @@ const projects = await Astro.glob('../projects/*.md');
 
 
   <section class="align-center page-content">
-	<div class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 hover:cursor-pointer" id="hidden-card">
+	<div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 hover:cursor-pointer" id="hidden-card">
 	  {projects.map(proj => (
 		<Card >
 		  <div class="card-element p-4 bg-secondary shadow-lg rounded-lg" data-slug={`/${proj.frontmatter.slug}`}>
@@ -83,12 +87,24 @@ const projects = await Astro.glob('../projects/*.md');
 	  ))}
 	</div>
   </section>
+
+
+  <div class="text-center pt-48">
+
+	  <h1 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Contact Me</h1>
+	  <p class="text-md text-primary">here are all the ways you can reach me!</p>
+  </div>
+
+  <div class="container mx-auto my-8" id="hidden-card">
+	<div class="bg-secondary shadow-md rounded-xl p-6 w-full md:w-2/5 lg:w-1/4 mx-auto border-accent border-4">
+	  <Contact />
+	</div>
+  </div>
   
   
   
   
-  
-  
+   
   </Layout>
   
 

@@ -3,6 +3,7 @@ title: Canada Distribution Centres
 tech: Next.js, React, Tailwind CSS, TypeScript, MySQL, Amazon RDS, Vercel.
 slug: Canada-Distribution-Centres
 ---
+
 <h3 class="text-center text-xl font-bold">Key Features</h3>
 <br>
 
@@ -33,7 +34,7 @@ slug: Canada-Distribution-Centres
   <br>
   <h3 class="text-md font-bold underline">GitHub Repository</h3>
   <br>
-  <a class="text-primary hover:text-accent" href="https://github.com/your-repo/your-project">Explore the docs</a>
+  <a class="text-primary hover:text-accent" href="https://github.com/stanley-balakai/Canada-Distribution-Centres">Explore the docs</a>
 </div>
 <br>
 

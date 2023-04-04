@@ -47,5 +47,5 @@ slug: Mood-Boost
 
   <h3 class="text-md font-bold underline">GitHub Repository</h3>
   <br>
-  <a class="text-primary hover:text-accent" href="https://github.com/your-repo/your-project">Explore the docs</a>
+  <a class="text-primary hover:text-accent" href="https://github.com/natetmmueller/Mood-Boost">Explore the docs</a>
 </div>
