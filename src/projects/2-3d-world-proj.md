@@ -1,7 +1,8 @@
 ---
-title: 3D-World
-tech: PostgreSQL, Django, Python, HTML, JavaScript, CSS, AWS.
+title: 3D World
+tech: React Three Fiber, Three.js, React, Tailwind CSS
 slug: 3D-World
+category: academic
 ---
 <h3 class="text-center text-xl font-bold">Key Features</h3>
 </br>

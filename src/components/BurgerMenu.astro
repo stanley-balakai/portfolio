@@ -10,13 +10,29 @@
   </button>
 
   <div id="burgerMenuDropdown" class="absolute right-0 mt-2 w-48 bg-blue-950 shadow-lg rounded-md p-4 hidden">
+    <a href="#home" class="text-gray-400 hover:text-accent flex items-center mb-3">
+      <i class="fas fa-home fa-lg mr-2"></i> Home
+    </a>
+    <a href="#about" class="text-gray-400 hover:text-accent flex items-center mb-3">
+      <i class="fas fa-user fa-lg mr-2"></i> About Me
+    </a>
+    <a href="#resume" class="text-gray-400 hover:text-accent flex items-center mb-3">
+      <i class="fas fa-file-alt fa-lg mr-2"></i> Resume
+    </a>
+    <a href="#projects" class="text-gray-400 hover:text-accent flex items-center mb-3">
+      <i class="fas fa-code fa-lg mr-2"></i> Projects
+    </a>
+    <a href="#contact" class="text-gray-400 hover:text-accent flex items-center mb-3">
+      <i class="fas fa-envelope fa-lg mr-2"></i> Contact
+    </a>
+    <hr class="border-gray-700 my-2">
     <a href="https://github.com/stanley-balakai" target="_blank" class="text-gray-400 hover:text-accent flex items-center mb-3">
       <i class="fab fa-github fa-lg mr-2"></i> GitHub
     </a>
     <a href="https://www.linkedin.com/in/stanley-balakai/" target="_blank" class="text-gray-400 hover:text-accent flex items-center mb-3">
       <i class="fab fa-linkedin fa-lg mr-2"></i> LinkedIn
     </a>
-    <a href="/resume-copy.pdf" target="_blank" class="text-gray-400 hover:text-accent flex items-center">
+    <a href="/Stanley Balakai.pdf" target="_blank" class="text-gray-400 hover:text-accent flex items-center">
       <i class="fas fa-file-pdf fa-lg mr-2"></i> Resume
     </a>
   </div>
@@ -37,5 +53,22 @@
       }
     });
 
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        burgerMenuDropdown.classList.add('hidden');
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   });
 </script>

@@ -1,7 +1,8 @@
 ---
-title: LoLDB
-tech: JavaScript, Node.js, Express, HTML, CSS/SASS, Bootstrap CSS,  MongoDB,
-slug: LoLDB
+title: LoL-DB
+tech: React, Redux, Node.js, Express.js, MongoDB, Mongoose
+slug: LoL-DB
+category: professional
 ---
 <h3 class="text-center text-xl font-bold">Key Features</h3>
 </br>
