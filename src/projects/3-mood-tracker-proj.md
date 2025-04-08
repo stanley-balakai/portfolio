@@ -1,7 +1,8 @@
---- 
-title: Mood Boost
-tech: React, Node.js, Express.js, HTML, JavaScript, CSS, Mongoose, Bootstrap
-slug: Mood-Boost
+---
+title: Mood Tracker
+tech: React, Tailwind CSS, TypeScript, Express, MongoDB, AWS
+slug: Mood-Tracker
+category: academic
 ---
 <h3 class="text-center text-xl font-bold">Key Features</h3>
 <br>

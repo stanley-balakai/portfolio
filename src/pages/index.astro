@@ -10,7 +10,7 @@ const projects = await Astro.glob('../projects/*.md');
 ---
 
 <Layout class="bg-secondary">
-	<div class="container mx-auto px-4 py-12 pt-56">
+	<div id="home" class="container mx-auto px-4 py-12 pt-56">
 	  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 		  <div class="flex flex-col items-start md:pl-12">
 		    <h1 class="text-6xl md:text-9xl font-bold font-sans text-accent fade-in-name">Stanley Balakai</h1>
@@ -20,227 +20,287 @@ const projects = await Astro.glob('../projects/*.md');
 	   </div>
 	</div>
 	
-<h2 class=" text-center text-4xl font-bold text-primary magic-text pt-60">About Me</h2>
-  <div class="container mx-auto px-4 py-12" id="hidden-card" >
-	<div class="ABC mx-auto max-w-3xl">
-	  <div class="relative group">
-		<div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
-		  <div class="w-full">
-			<div class="px-4">
-			  	<p class="text-2xl text-primary font-light">Hi, I'm <strong class="font-bold">Stanley Balakai</strong>, a software developer with a focus on creating efficient, impactful solutions. My path as a programmer has given me a unique perspective and a solid foundation in adapting to new challenges and technologies.
-				<br/>
-				<br/>
-				What drives me is the constant evolution of tech—there's always a new framework to master or a more elegant approach to discover. I thrive on transforming abstract concepts into functional, user-friendly applications.
-				<br/>
-				<br/>
-				When I'm not coding, I balance my technical work with other pursuits—cooking, staying active through sports and fitness, exploring outdoor trails, playing card games, and enjoying good food with good company.
-				<br/>
-				<br/>
-				I believe the best code comes from collaboration. So whether you're looking for a developer or just want to chat about the latest in tech, reach out—I'm always up for building something meaningful together.
-			</p>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</div>
+  <div id="about" class="container mx-auto px-4 py-12 pt-40">
+    <h2 class="text-center text-4xl font-bold text-primary magic-text mb-12">About Me</h2>
+    <div class="mx-auto max-w-3xl" id="hidden-card">
+      <div class="relative group">
+        <div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
+          <div class="w-full">
+            <div class="px-4">
+              <p class="text-2xl text-primary font-light">Hi, I'm <strong class="font-bold">Stanley Balakai</strong>, a software developer with a focus on creating efficient, impactful solutions. My path as a programmer has given me a unique perspective and a solid foundation in adapting to new challenges and technologies.
+                <br/>
+                <br/>
+                What drives me is the constant evolution of tech—there's always a new framework to master or a more elegant approach to discover. I thrive on transforming abstract concepts into functional, user-friendly applications.
+                <br/>
+                <br/>
+                When I'm not coding, I balance my technical work with other pursuits—cooking, staying active through sports and fitness, exploring outdoor trails, playing card games, and enjoying good food with good company.
+                <br/>
+                <br/>
+                I believe the best code comes from collaboration. So whether you're looking for a developer or just want to chat about the latest in tech, reach out—I'm always up for building something meaningful together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="text-center pt-48">
-
-	  <h1 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Technologies</h1>
-	  <p class="text-md text-primary">this is some of the stuff i've worked with</p>
+  <div id="career-goal" class="container mx-auto px-4 py-12 pt-40" id="hidden-card">
+    <div class="mx-auto max-w-3xl">
+      <div class="relative group">
+        <div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
+          <div class="w-full">
+            <div class="px-4">
+              <h3 class="text-2xl text-primary font-bold mb-4">Career Goal</h3>
+              <p class="text-xl text-primary font-light">
+                My professional goal is to continue growing as a Full-Stack Developer while specializing in creating intuitive, accessible, and scalable web applications. I aim to leverage my technical expertise and problem-solving skills to contribute to innovative solutions that make a meaningful impact on users' lives. Long-term, I aspire to lead development teams and mentor emerging developers while staying at the forefront of technology trends.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="pt-20">
-	<div class="container mx-auto max-w-screen-lg">
-	  <Technologies />
-	</div>
-  </div>
-  
-
-
-  <div class="container mx-auto px-4 py-12 pt-48">
-	<div class=" mx-auto max-w-3xl">
-	  <div class="text-center">
-		<div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
-		  <div class="w-full">
-			<div class="px-4">
-				<div class="magic">
-					
-				</div>
-			  <h2 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Projects</h2>
-			  <p class="text-md text-primary">click to read more!</p>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
-</div>
-
-
-  <section class="align-center page-content">
-	<div class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 hover:cursor-pointer" id="hidden-card">
-	  {projects.map(proj => (
-		<Card >
-		  <div class="card-element p-4 bg-secondary shadow-lg rounded-lg" data-slug={`/${proj.frontmatter.slug}`}>
-			<h3 class="text-primary text-center text-xl font-bold">{proj.frontmatter.title}</h3>
-			<p class="text-primary mt-2">{proj.frontmatter.tech}</p>
-
-		  </div>
-		</Card>
-	  ))}
-	</div>
-  </section>
-
-
-  <div class="text-center pt-48">
-
-	  <h1 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Contact Me</h1>
-	  <p class="text-md text-primary">here are all the ways you can reach me!</p>
+  <div id="resume" class="container mx-auto px-4 py-12 pt-40" id="hidden-card">
+    <div class="mx-auto max-w-3xl">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Resume Highlights</h2>
+        <p class="text-md text-primary">A summary of my professional experience and skills</p>
+      </div>
+      <div class="relative group">
+        <div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
+          <div class="w-full">
+            <div class="px-4">
+              <div class="mb-6">
+                <h3 class="text-xl text-primary font-bold mb-2">Key Skills</h3>
+                <ul class="list-disc list-inside text-primary text-lg">
+                  <li>Full-Stack Web Development (React, Node.js, Express)</li>
+                  <li>RESTful API Design and Implementation</li>
+                  <li>Database Design and Management (SQL, MongoDB)</li>
+                  <li>UI/UX Design Principles</li>
+                  <li>Test-Driven Development</li>
+                  <li>Agile Development Methodologies</li>
+                </ul>
+              </div>
+              <div class="mb-6">
+                <h3 class="text-xl text-primary font-bold mb-2">Experience Overview</h3>
+                <ul class="list-disc list-inside text-primary text-lg">
+                  <li>3+ years of software development experience</li>
+                  <li>Led development of multiple web applications from concept to deployment</li>
+                  <li>Collaborated with cross-functional teams to deliver customer-focused solutions</li>
+                  <li>Actively participated in code reviews and implemented feedback to improve code quality</li>
+                </ul>
+              </div>
+              <div class="text-center mt-6">
+                <a href="/Stanley Balakai.pdf" target="_blank" class="inline-block bg-accent text-blue-950 px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all">
+                  <i class="fas fa-file-pdf mr-2"></i>View Full Resume
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="container mx-auto my-8" id="hidden-card">
-	<div class="bg-secondary shadow-md rounded-xl p-6 w-full md:w-2/5 lg:w-1/4 mx-auto border-accent border-4">
-	  <Contact />
-	</div>
+  <div id="technologies" class="container mx-auto px-4 py-12 pt-40">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Technologies</h2>
+      <p class="text-md text-primary">this is some of the stuff i've worked with</p>
+    </div>
+    <div class="container mx-auto max-w-screen-lg">
+      <Technologies />
+    </div>
   </div>
   
+  <div id="projects" class="container mx-auto px-4 py-12 pt-40">
+    <div class="mx-auto max-w-3xl mb-12">
+      <div class="text-center">
+        <div class="flex items-center py-4 leading-none bg-secondary divide-x divide-gray-600 rounded-lg px-7 z-10">
+          <div class="w-full">
+            <div class="px-4">
+              <div class="magic"></div>
+              <h2 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Projects</h2>
+              <p class="text-md text-primary">click to read more!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="hidden-card">
+        {projects.map(proj => (
+          <Card>
+            <div class="card-element p-4 bg-secondary shadow-lg rounded-lg" data-slug={`/${proj.frontmatter.slug}`}>
+              <h3 class="text-primary text-center text-xl font-bold">{proj.frontmatter.title}</h3>
+              <p class="text-primary mt-2">{proj.frontmatter.tech}</p>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" class="container mx-auto px-4 py-12 pt-40">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl text-primary magic-text magic font-sans font-extrabold">Contact Me</h2>
+      <p class="text-md text-primary">here are all the ways you can reach me!</p>
+    </div>
+
+    <div class="my-8" id="hidden-card">
+      <div class="bg-secondary shadow-md rounded-xl p-6 w-full md:w-2/5 lg:w-1/4 mx-auto border-accent border-4">
+        <Contact />
+      </div>
+    </div>
+  </div>
   
+  <footer class="bg-blue-950 py-4 text-center text-primary mt-20">
+    <div class="container mx-auto px-4">
+      <p>&copy; {new Date().getFullYear()} Stanley Balakai. All rights reserved.</p>
+      <div class="flex justify-center mt-2 space-x-4">
+        <a href="https://github.com/stanley-balakai" target="_blank" class="text-primary hover:text-accent">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/stanley-balakai/" target="_blank" class="text-primary hover:text-accent">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
   
-  
-   
-  </Layout>
+</Layout>
   
 
-  <style>
-	.group::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to right, #AFD34D, #91A1BF);
-  filter: blur(10px);
-  opacity: 0.5;
-  transition: opacity 0.5s;
-  border-radius: inherit;
-  z-index: -1;
-}
-
-.group:hover::before {
-  opacity: 1;
-}
-
-.img-hover {
-  transition: transform 0.3s ease-in-out;
-}
-
-.img-hover:hover {
-  transform: scale(1.1); /* Change 1.1 to the desired scaling factor */
-}
-
-:root {  
-  --primary: #91A1BF;
-  --accent: #AFD34D;
-}
-
-@keyframes background-pan {
-  from {
-    background-position: 0% center;
+<style>
+  .group::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, #AFD34D, #91A1BF);
+    filter: blur(10px);
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    border-radius: inherit;
+    z-index: -1;
   }
-  
-  to {
-    background-position: -200% center;
-  }
-}
 
-
-
-
-
-
-
-
-.magic {
-  display: inline-block;
-  position: relative;
-}
-
- .magic-text {
-  animation: background-pan 3s linear infinite;
-  background: linear-gradient(
-    to right,
-    var(--primary),
-    var(--accent),
-    var(--primary),
-    var(--primary)
-  );
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
-}
-
-@media (prefers-reduced-motion: reduce) {
-	#hidden-card.show {
-	  opacity: 1;
-	}
-
-  }
-
-#hidden-card {
-	  opacity: 0;
-	  transition: all 1s ease-in-out;
-	}
-
-	#hidden-card.show {
-	  opacity: 1;
-	}
-
-.fade-in-image {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
-}
-
-.fade-in-name {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.2s;
-}
-
-@keyframes fadeIn {
-  to {
+  .group:hover::before {
     opacity: 1;
   }
-}
 
-  </style>
+  .img-hover {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .img-hover:hover {
+    transform: scale(1.1); /* Change 1.1 to the desired scaling factor */
+  }
+
+  :root {  
+    --primary: #91A1BF;
+    --accent: #AFD34D;
+  }
+
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+
+  .magic {
+    display: inline-block;
+    position: relative;
+  }
+
+  .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--primary),
+      var(--accent),
+      var(--primary),
+      var(--primary)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #hidden-card.show {
+      opacity: 1;
+    }
+  }
+
+  #hidden-card {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+
+  #hidden-card.show {
+    opacity: 1;
+  }
+
+  .fade-in-image {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+  }
+
+  .fade-in-name {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+</style>
   
-  <script>
+<script>
+  document.querySelectorAll(".card-element").forEach((card) => {
+    card.addEventListener("click", function () {
+      const slug = this.getAttribute("data-slug");
+      window.location.href = slug;
+    });
+  });
 
-	document.querySelectorAll(".card-element").forEach((card) => {
-	card.addEventListener("click", function () {
-		const slug = this.getAttribute("data-slug");
-		window.location.href = slug;
-	});
-	});
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show')
+      }
+    });
+  });
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.intersectionRatio > 0) {
-			entry.target.classList.add('show');
-			} else {
-			entry.target.classList.remove('show')
-		}
-	});
-});
+  const hiddenElements = document.querySelectorAll("#hidden-card")
+  hiddenElements.forEach((element) => observer.observe(element));
 
-
-	const hiddenElements = document.querySelectorAll("#hidden-card")
-	hiddenElements.forEach((element) => observer.observe(element));
-
-
-
-  </script>
+  // Contact form handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm') as HTMLFormElement;
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // In a real implementation, you would send the form data to a server
+        alert('Thanks for your message! I will get back to you soon.');
+        contactForm.reset();
+      });
+    }
+  });
+</script>
   
   
   

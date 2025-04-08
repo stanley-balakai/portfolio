@@ -2,6 +2,7 @@
 title: Canada Distribution Centres
 tech: Next.js, React, Tailwind CSS, TypeScript, MySQL, Amazon RDS, Vercel.
 slug: Canada-Distribution-Centres
+category: professional
 ---
 
 <h3 class="text-center text-xl font-bold">Key Features</h3>
